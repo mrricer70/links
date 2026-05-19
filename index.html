@@ -141,6 +141,33 @@
     .link-btn.discord:hover    { border-color: rgba(88, 101, 242, 0.55); }
     .link-btn.cover-page:hover { border-color: rgba(255, 107, 53, 0.55); }
 
+    .video-section {
+      width: 100%;
+      max-width: 480px;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-section .section-label {
+      margin-top: 0;
+    }
+
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-top: 0.5rem;
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
     .section-label {
       font-size: 0.65rem;
       font-weight: 700;
@@ -170,6 +197,18 @@
     </div>
     <h1>Darius Yeung</h1>
     <p class="subtitle">Cybersecurity Professional</p>
+  </div>
+
+  <div class="video-section">
+    <p class="section-label">Caught on Camera 👀</p>
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/5Tr8w8N5_Mo?start=918"
+        title="Exposed by Brawadis"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
   <div class="links">
