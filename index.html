@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darius Yeung — Links</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #09090f;
+      --surface2: #16161f;
+      --border: #1e1e2e;
+      --text: #e8e8f0;
+      --muted: #7070a0;
+      --sunset-1: #ff6b35;
+      --sunset-2: #f7931e;
+      --sunset-3: #e9436e;
+      --sunset-4: #9b27af;
+      --gradient: linear-gradient(135deg, var(--sunset-1), var(--sunset-2), var(--sunset-3), var(--sunset-4));
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 4rem 1.5rem 3rem;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--gradient);
+      z-index: 100;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2.25rem;
+    }
+
+    .photo-wrap {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      padding: 3px;
+      background: var(--gradient);
+      margin-bottom: 1rem;
+    }
+
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: 70% center;
+      border: 3px solid var(--bg);
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .subtitle {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+
+    .links {
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 1.25rem;
+      border-radius: 0.75rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.93rem;
+      font-weight: 500;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      position: relative;
+    }
+
+    .link-btn:hover {
+      background: #1c1c28;
+      transform: translateY(-2px);
+    }
+
+    .link-btn svg {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+
+    .link-label {
+      flex: 1;
+      text-align: center;
+      margin-right: 28px; /* offset for the icon so label appears visually centered */
+    }
+
+    .link-btn.instagram:hover  { border-color: rgba(225, 48, 108, 0.55); }
+    .link-btn.snapchat:hover   { border-color: rgba(255, 237, 0, 0.45); }
+    .link-btn.tiktok:hover     { border-color: rgba(0, 242, 234, 0.45); }
+    .link-btn.linkedin:hover   { border-color: rgba(0, 119, 181, 0.55); }
+    .link-btn.twitch:hover     { border-color: rgba(145, 70, 255, 0.55); }
+    .link-btn.github-link:hover { border-color: rgba(200, 200, 200, 0.4); }
+    .link-btn.facebook:hover   { border-color: rgba(24, 119, 242, 0.55); }
+    .link-btn.discord:hover    { border-color: rgba(88, 101, 242, 0.55); }
+
+    .section-label {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      margin-bottom: 0.1rem;
+      align-self: flex-start;
+      padding-left: 0.25rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.72rem;
+      color: #2e2e4a;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar"></div>
+
+  <div class="profile">
+    <div class="photo-wrap">
+      <img src="profile.png" alt="Darius Yeung" />
+    </div>
+    <h1>Darius Yeung</h1>
+    <p class="subtitle">Cybersecurity Professional</p>
+  </div>
+
+  <div class="links">
+
+    <!-- Instagram -->
+    <p class="section-label">Instagram</p>
+    <a class="link-btn instagram" href="https://instagram.com/mrricer69" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="link-label">@mrricer69</span>
+    </a>
+    <a class="link-btn instagram" href="https://instagram.com/yeungd03" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="link-label">@yeungd03</span>
+    </a>
+    <a class="link-btn instagram" href="https://instagram.com/mr.ricer69" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <span class="link-label">@mr.ricer69</span>
+    </a>
+
+    <!-- Other socials -->
+    <p class="section-label">Socials</p>
+    <a class="link-btn snapchat" href="https://snapchat.com/add/mrricer69" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.007 2C9.01 2 6.783 3.95 6.783 7.13v.527l-.944-.383c-.41-.166-.82.13-.9.54l-.12.634c-.083.437.196.862.632.97l1.332.332c-.12.41-.267.79-.448 1.136-.48.91-1.336 1.604-2.335 2.012 0 0-.553.193-.553.507 0 .453.804.615 1.37.73.03.006.062.013.093.02.224.05.362.268.302.49-.08.3-.208.528-.208.528s-.11.242.1.37c.178.11.717.024 1.26.28.49.232.537.823 1.082 1.124.47.26 1.026.09 1.47.002.56-.11 1.14-.41 1.98-.41.84 0 1.42.3 1.98.41.444.088 1 .258 1.47-.002.545-.301.592-.892 1.082-1.124.543-.256 1.082-.17 1.26-.28.21-.128.1-.37.1-.37s-.128-.228-.208-.528c-.06-.222.078-.44.302-.49.031-.007.063-.014.093-.02.566-.115 1.37-.277 1.37-.73 0-.314-.553-.507-.553-.507-.999-.408-1.855-1.101-2.335-2.012-.181-.346-.328-.726-.448-1.136l1.332-.332c.436-.108.715-.533.632-.97l-.12-.634c-.08-.41-.49-.706-.9-.54l-.944.383V7.13C17.217 3.95 14.99 2 12.007 2z"/>
+      </svg>
+      <span class="link-label">Snapchat · @mrricer69</span>
+    </a>
+    <a class="link-btn tiktok" href="https://tiktok.com/@mrricer69" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.22 8.22 0 0 0 4.8 1.53V6.77a4.85 4.85 0 0 1-1.03-.08z"/>
+      </svg>
+      <span class="link-label">TikTok · @mrricer69</span>
+    </a>
+    <a class="link-btn twitch" href="https://twitch.tv/mrricer69" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/>
+      </svg>
+      <span class="link-label">Twitch · mrricer69</span>
+    </a>
+    <a class="link-btn facebook" href="https://facebook.com/mrricer69" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+      <span class="link-label">Facebook · mrricer69</span>
+    </a>
+    <a class="link-btn discord" href="https://discordapp.com/users/393558356276543489" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+      </svg>
+      <span class="link-label">Discord · mrricer69</span>
+    </a>
+
+    <!-- Professional -->
+    <p class="section-label">Professional</p>
+    <a class="link-btn linkedin" href="https://linkedin.com/in/darius-yeung" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+        <rect x="2" y="9" width="4" height="12"/>
+        <circle cx="4" cy="4" r="2"/>
+      </svg>
+      <span class="link-label">LinkedIn · Darius Yeung</span>
+    </a>
+    <a class="link-btn github-link" href="https://github.com/mrricer70" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
+      </svg>
+      <span class="link-label">GitHub · mrricer70</span>
+    </a>
+
+  </div>
+
+  <footer>Built with Claude Code &nbsp;·&nbsp; Anthropic</footer>
+
+  <script>
+    document.querySelectorAll('.link-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.style.transform = 'scale(0.97)';
+        setTimeout(() => btn.style.transform = '', 150);
+      });
+    });
+  </script>
+</body>
+</html>
