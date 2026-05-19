@@ -24,7 +24,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: var(--bg);
+      background: var(--bg) url('bg.jpeg') center center / cover no-repeat fixed;
       color: var(--text);
       font-family: 'Space Grotesk', system-ui, sans-serif;
       min-height: 100vh;
@@ -33,6 +33,16 @@
       align-items: center;
       padding: 4rem 1.5rem 3rem;
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(9, 9, 15, 0.78);
+      z-index: 0;
+    }
+
+    .top-bar, .profile, .links, footer { position: relative; z-index: 1; }
 
     .top-bar {
       position: fixed;
